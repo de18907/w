@@ -50,7 +50,30 @@ function agregar(){
     document.getElementById("tabla").appendChild(tr_element);
 }
 function editar(){
-
+    var mascota = prompt("¿Cuál fila quieres editar?", "");
+    if (mascota != null){
+        var tabla = document.getElementById("tabla").childNodes[mascota];
+        tabla.removeChild(document.getElementById("Lugar").value, tabla.childNodes[1]);   
+        tabla.removeChild(document.getElementById("Latitud").value, tabla.childNodes[2]);  
+        tabla.removeChild(document.getElementById("Logitud").value, tabla.childNodes[3]);  
+        tabla.removeChild(document.getElementById("email").value, tabla.childNodes[4]);  
+        tabla.removeChild(document.getElementById("usr").value, tabla.childNodes[5]);  
+        tabla.removeChild(document.getElementById("date").value, tabla.childNodes[6]); 
+        tabla.removeChild(document.getElementById("comment").value, tabla.childNodes[7]);   
+        alert("La fila " + mascota + "se a editado correctamente");
+    }
+    else {
+        alert("La fila no se a eliminado");
+    }
 }
 function eliminar(){
+    var mascota = prompt("¿Cuál fila quieres eliminar?", "");
+    if (mascota != null){
+        var tabla = document.getElementById("tabla");
+        tabla.removeChild(tabla.childNodes[mascota]);   
+        alert("La fila " + mascota + "se a eliminado correctamente");
+    }
+    else {
+        alert("La fila no se a eliminado");
+    }
 }
