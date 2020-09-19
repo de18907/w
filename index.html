@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>tarea2</title>
+</head>
+<body>
+  <div class="container">
+    <!-- formulario -->
+    <h1 class="tema ">Reportes de violaciones</h1>
+    <form class="row align-items-center justify-content-center" action="/action_page.php">
+        <div class="form-group col-sm-12 col-md-6 col-lg-8">
+          <label for="lugar">Lugar desde donde reporta:</label>
+          <input type="text" class="form-control" id="Lugar">
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-8">
+            <label for="Latitud">Latitud:</label>
+            <input type="text" class="form-control" id="Latitud">
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-8">
+            <label for="Logitud">Logitud:</label>
+            <input type="text" class="form-control" id="Logitud">
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-8">
+          <label for="fecha">Fecha:</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-8">
+          <label for="usr">Tipo de violacion:</label>
+          <input type="text" class="form-control" id="usr">
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-8">
+          <label for="comment">comentario:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-8">
+          <label for="email">Correo:</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-8 align-items-center justify-content-center">
+          <button type="button" class="btn btn-info col-sm-3 col-md-3 col-lg-3" onclick="agregar()" >Agregar</button>
+          <button type="button" class="btn btn-info col-sm-3 col-md-3 col-lg-3" onclick="editar()" >Editar</button>
+          <button type="button" class="btn btn-info col-sm-3 col-md-3 col-lg-3" onclick="eliminar()" >Eliminar</button>
+        </div>
+    </form>
+    <div class="row">
+      <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Lugar</th>
+              <th scope="col">Latitud </th>
+              <th scope="col">Logitud</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Tipo de violacion</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Comentario</th>
+            </tr>
+          </thead>
+          <tbody id="tabla">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="codigo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
